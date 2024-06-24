@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Brand;
+use App\Models\RoleUser;
 use Illuminate\Http\Request;
 
-class BrandController extends Controller
+class RoleUsersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -26,7 +26,7 @@ class BrandController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Brand $brand)
+    public function show(RoleUser $roleUser)
     {
         //
     }
@@ -34,7 +34,7 @@ class BrandController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Brand $brand)
+    public function update(Request $request, RoleUser $roleUser)
     {
         //
     }
@@ -42,7 +42,7 @@ class BrandController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Brand $brand)
+    public function destroy(RoleUser $roleUser)
     {
         //
     }

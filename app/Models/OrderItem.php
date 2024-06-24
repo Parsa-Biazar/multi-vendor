@@ -5,9 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class ProductImage extends Model
+class OrderItem extends Model
 {
-    protected $fillable = ['product_id', 'image_path'];
+    protected $fillable = ['order_id', 'product_id', 'quantity', 'price'];
+
+    // رابطه چند به یک با Order
+    public function order(): BelongsTo
+    {
+        return $this->belongsTo(Order::class);
+    }
 
     // رابطه چند به یک با Product
     public function product(): BelongsTo

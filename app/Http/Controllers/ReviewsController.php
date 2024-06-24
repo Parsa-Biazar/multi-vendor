@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Reviews;
+use App\Models\Review;
 use Illuminate\Http\Request;
 
 class ReviewsController extends Controller
@@ -26,7 +26,7 @@ class ReviewsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Reviews $reviews)
+    public function show(Review $reviews)
     {
         //
     }
@@ -34,7 +34,7 @@ class ReviewsController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Reviews $reviews)
+    public function update(Request $request, Review $reviews)
     {
         //
     }
@@ -42,7 +42,7 @@ class ReviewsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Reviews $reviews)
+    public function destroy(Review $reviews)
     {
         //
     }

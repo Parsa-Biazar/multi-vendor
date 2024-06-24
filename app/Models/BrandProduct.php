@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class BrandProduct extends Model
 {
     use HasFactory;
+
+    //جدول پیوت
 }
