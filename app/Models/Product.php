@@ -28,13 +28,13 @@ class Product extends Model
     // رابطه چند به چند با Brand از طریق جدول brandproduct
     public function brands(): BelongsToMany
     {
-        return $this->belongsToMany(Brand::class, 'brandproduct');
+        return $this->belongsToMany(Brand::class, 'brand_product');
     }
 
     // رابطه چند به چند با Category از طریق جدول productcategories
     public function categories(): BelongsToMany
     {
-        return $this->belongsToMany(Categories::class, 'productcategories');
+        return $this->belongsToMany(Categories::class, 'product_categories');
     }
 
     public function scopeActiveDesc($query)

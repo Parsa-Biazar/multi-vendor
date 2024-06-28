@@ -14,6 +14,6 @@ class Brand extends Model
     // رابطه چند به چند با Product از طریق جدول brand_product
     public function products(): BelongsToMany
     {
-        return $this->belongsToMany(Product::class, 'brandproduct');
+        return $this->belongsToMany(Product::class, 'brand_product');
     }
 }

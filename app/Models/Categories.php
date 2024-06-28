@@ -14,6 +14,6 @@ class Categories extends Model
     // رابطه چند به چند با Product از طریق جدول productcategories
     public function products(): BelongsToMany
     {
-        return $this->belongsToMany(Product::class, 'productcategories');
+        return $this->belongsToMany(Product::class, 'product_categories');
     }
 }
