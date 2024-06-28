@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API\V1;
 
+use App\Http\Controllers\API\ApiController;
 use App\Models\user;
 use Illuminate\Http\Request;
 
-class userController extends Controller
+class userController extends ApiController
 {
     public function index()
     {

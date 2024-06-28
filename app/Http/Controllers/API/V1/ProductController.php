@@ -1,18 +1,21 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API\V1;
 
-use App\Models\OrderItems;
+use App\Http\Controllers\API\ApiController;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
-class OrderItemsController extends Controller
+class ProductController extends ApiController
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $products=Product::activeDesc()->get();
+        dd($products);
+        return $this->responseSuccess($products,200);
     }
 
     /**
@@ -26,7 +29,7 @@ class OrderItemsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Order_Items $order_Items)
+    public function show(Product $product)
     {
         //
     }
@@ -34,7 +37,7 @@ class OrderItemsController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Order_Items $order_Items)
+    public function update(Request $request, Product $product)
     {
         //
     }
@@ -42,7 +45,7 @@ class OrderItemsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Order_Items $order_Items)
+    public function destroy(Product $product)
     {
         //
     }

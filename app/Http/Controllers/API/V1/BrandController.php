@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API\V1;
 
-use App\Models\Vendor;
+use App\Http\Controllers\API\ApiController;
+use App\Models\Brand;
 use Illuminate\Http\Request;
 
-class VendorController extends Controller
+class BrandController extends ApiController
 {
     /**
      * Display a listing of the resource.
@@ -26,7 +27,7 @@ class VendorController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Vendor $vendor)
+    public function show(Brand $brand)
     {
         //
     }
@@ -34,7 +35,7 @@ class VendorController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Vendor $vendor)
+    public function update(Request $request, Brand $brand)
     {
         //
     }
@@ -42,7 +43,7 @@ class VendorController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Vendor $vendor)
+    public function destroy(Brand $brand)
     {
         //
     }
