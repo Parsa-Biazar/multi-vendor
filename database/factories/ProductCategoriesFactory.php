@@ -12,7 +12,7 @@ class ProductCategoriesFactory extends Factory
     {
         return [
             'product_id' => \App\Models\Product::factory(),
-            'category_id' => \App\Models\Categories::factory(),
+            'categories_id' => \App\Models\Categories::factory(),
         ];
     }
 }
