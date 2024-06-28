@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API\V1;
 
+use App\Http\Controllers\API\ApiController;
 use App\Models\Role;
 use Illuminate\Http\Request;
 
-class RoleController extends Controller
+class RoleController extends ApiController
 {
     public function index()
     {

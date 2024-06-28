@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API\V1;
 
+use App\Http\Controllers\API\ApiController;
 use App\Models\RoleUser;
 use Illuminate\Http\Request;
 
-class RoleUsersController extends Controller
+class RoleUsersController extends ApiController
 {
     /**
      * Display a listing of the resource.

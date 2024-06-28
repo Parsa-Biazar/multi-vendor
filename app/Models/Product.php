@@ -36,4 +36,9 @@ class Product extends Model
     {
         return $this->belongsToMany(Categories::class, 'productcategories');
     }
+
+    public function scopeActiveDesc($query)
+    {
+        return $query->where('is_active', 1)->latest();
+    }
 }

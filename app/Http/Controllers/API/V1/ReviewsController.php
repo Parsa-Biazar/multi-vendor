@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API\V1;
 
-use App\Models\categories;
+use App\Http\Controllers\API\ApiController;
+use App\Models\Review;
 use Illuminate\Http\Request;
 
-class CategoriesController extends Controller
+class ReviewsController extends ApiController
 {
     /**
      * Display a listing of the resource.
@@ -26,7 +27,7 @@ class CategoriesController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(CategoriesController $categories)
+    public function show(Review $reviews)
     {
         //
     }
@@ -34,7 +35,7 @@ class CategoriesController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, CategoriesController $categories)
+    public function update(Request $request, Review $reviews)
     {
         //
     }
@@ -42,7 +43,7 @@ class CategoriesController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(CategoriesController $categories)
+    public function destroy(Review $reviews)
     {
         //
     }
