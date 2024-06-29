@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\V1\HomepageController;
 use App\Http\Controllers\API\V1\ProductController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,5 +18,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('guest')->prefix('/v1')
     ->group(function() {
-        Route::resource('product',ProductController::class);
+        Route::get('/',[HomepageController::class,'index']);
+        Route::get('/{product}',[HomepageController::class,'show']);
     });
