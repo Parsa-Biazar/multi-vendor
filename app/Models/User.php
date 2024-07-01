@@ -49,7 +49,7 @@ class User extends Authenticatable
     // رابطه چند به چند با Role از طریق جدول role_user
     public function roles(): BelongsToMany
     {
-        return $this->belongsToMany(Role::class, 'role_user');
+        return $this->belongsToMany(Role::class, 'role_users');
     }
 
     // رابطه یک به چند با Vendor

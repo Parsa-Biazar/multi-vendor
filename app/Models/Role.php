@@ -14,6 +14,6 @@ class Role extends Model
     // رابطه چند به چند با User از طریق جدول role_user
     public function users(): BelongsToMany
     {
-        return $this->belongsToMany(User::class, 'role_user');
+        return $this->belongsToMany(User::class, 'role_users');
     }
 }
