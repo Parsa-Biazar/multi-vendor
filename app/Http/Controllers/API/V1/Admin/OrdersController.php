@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\API\V1;
+namespace App\Http\Controllers\API\V1\Admin;
 
 use App\Http\Controllers\API\ApiController;
+use App\Models\Order;
 use Illuminate\Http\Request;
 
-class CategoriesController extends ApiController
+class OrdersController extends ApiController
 {
     /**
      * Display a listing of the resource.
@@ -26,7 +27,7 @@ class CategoriesController extends ApiController
     /**
      * Display the specified resource.
      */
-    public function show(CategoriesController $categories)
+    public function show(Order $orders)
     {
         //
     }
@@ -34,7 +35,7 @@ class CategoriesController extends ApiController
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, CategoriesController $categories)
+    public function update(Request $request, Order $orders)
     {
         //
     }
@@ -42,7 +43,7 @@ class CategoriesController extends ApiController
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(CategoriesController $categories)
+    public function destroy(Order $orders)
     {
         //
     }

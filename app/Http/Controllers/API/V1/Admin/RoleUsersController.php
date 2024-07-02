@@ -1,21 +1,19 @@
 <?php
 
-namespace App\Http\Controllers\API\V1;
+namespace App\Http\Controllers\API\V1\Admin;
 
 use App\Http\Controllers\API\ApiController;
-use App\Models\Product;
+use App\Models\RoleUser;
 use Illuminate\Http\Request;
 
-class ProductController extends ApiController
+class RoleUsersController extends ApiController
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $products=Product::activeDesc()->with('categories','brands')->get();
-
-        return $this->responseSuccess($products,200);
+        //
     }
 
     /**
@@ -29,7 +27,7 @@ class ProductController extends ApiController
     /**
      * Display the specified resource.
      */
-    public function show(Product $product)
+    public function show(RoleUser $roleUser)
     {
         //
     }
@@ -37,7 +35,7 @@ class ProductController extends ApiController
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Product $product)
+    public function update(Request $request, RoleUser $roleUser)
     {
         //
     }
@@ -45,7 +43,7 @@ class ProductController extends ApiController
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Product $product)
+    public function destroy(RoleUser $roleUser)
     {
         //
     }
