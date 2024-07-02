@@ -32,6 +32,7 @@ class DatabaseSeeder extends Seeder
             ProductsTableSeeder::class,
             OrdersTableSeeder::class,
             ReviewsTableSeeder::class,
+            ProductImagesTableSeeder::class,
         ]);
     }
 
