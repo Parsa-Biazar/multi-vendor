@@ -10,11 +10,19 @@ class VendorsTableSeeder extends Seeder
 {
     public function run()
     {
-        // Create 1 vendor for the first user (seller)
-        Vendor::create([
-            'user_id' => 1,
-            'store_name' => 'Main Vendor Store',
-            'store_description' => 'This is the main vendor store.',
-        ]);
+        $faker = \Faker\Factory::create();
+
+        // Create vendors for the new sellers
+        $sellerUsers = User::whereHas('roles', function ($query) {
+            $query->where('role_id', 1); // Role ID for seller
+        })->get();
+
+        foreach ($sellerUsers as $user) {
+            Vendor::create([
+                'user_id' => $user->id,
+                'store_name' => $faker->company . ' Store',
+                'store_description' => $faker->sentence,
+            ]);
+        }
     }
 }

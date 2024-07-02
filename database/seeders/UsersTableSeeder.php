@@ -22,7 +22,7 @@ class UsersTableSeeder extends Seeder
             ]);
 
             // Assign role
-            $roleId = ($i == 0) ? 1 : (($i < 5) ? 2 : 3); // Seller for first user, buyer for next 4 users, admin for next 5 users
+            $roleId = (($i < 5) ? 2 : 3); // buyer for next 4 users, admin for next 5 users
             RoleUser::create([
                 'user_id' => $user->id,
                 'role_id' => $roleId,
@@ -40,5 +40,20 @@ class UsersTableSeeder extends Seeder
             'user_id' => $superadmin->id,
             'role_id' => 4,
         ]);
+
+        // Create 5 more sellers
+        for ($i = 0; $i < 5; $i++) {
+            $user = User::create([
+                'name' => $faker->name,
+                'email' => $faker->unique()->safeEmail,
+                'password' => bcrypt('password'),
+            ]);
+
+            // Assign role
+            RoleUser::create([
+                'user_id' => $user->id,
+                'role_id' => 1, // Role ID for seller
+            ]);
+        }
     }
 }

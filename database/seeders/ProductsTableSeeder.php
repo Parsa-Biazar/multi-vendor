@@ -14,14 +14,13 @@ class ProductsTableSeeder extends Seeder
     {
         $faker = \Faker\Factory::create();
 
-        $vendor = Vendor::first();
         $categories = \App\Models\Categories::all();
         $brands = \App\Models\Brand::all();
 
         // Create 20 products
         for ($i = 0; $i < 20; $i++) {
             $product = Product::create([
-                'vendor_id' => $vendor->id,
+                'vendor_id' => rand(1,5),
                 'name' => $faker->word,
                 'description' => $faker->sentence,
                 'price' => $faker->randomFloat(2, 10, 100),
