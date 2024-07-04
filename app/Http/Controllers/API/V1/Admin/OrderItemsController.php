@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\API\V1;
+namespace App\Http\Controllers\API\V1\Admin;
 
 use App\Http\Controllers\API\ApiController;
-use App\Models\RoleUser;
+use App\Http\Controllers\Order_Items;
+use App\Models\OrderItems;
 use Illuminate\Http\Request;
 
-class RoleUsersController extends ApiController
+class OrderItemsController extends ApiController
 {
     /**
      * Display a listing of the resource.
@@ -27,7 +28,7 @@ class RoleUsersController extends ApiController
     /**
      * Display the specified resource.
      */
-    public function show(RoleUser $roleUser)
+    public function show(Order_Items $order_Items)
     {
         //
     }
@@ -35,7 +36,7 @@ class RoleUsersController extends ApiController
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, RoleUser $roleUser)
+    public function update(Request $request, Order_Items $order_Items)
     {
         //
     }
@@ -43,7 +44,7 @@ class RoleUsersController extends ApiController
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(RoleUser $roleUser)
+    public function destroy(Order_Items $order_Items)
     {
         //
     }

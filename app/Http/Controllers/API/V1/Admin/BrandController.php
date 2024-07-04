@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\API\V1;
+namespace App\Http\Controllers\API\V1\Admin;
 
 use App\Http\Controllers\API\ApiController;
-use App\Models\Review;
+use App\Models\Brand;
 use Illuminate\Http\Request;
 
-class ReviewsController extends ApiController
+class BrandController extends ApiController
 {
     /**
      * Display a listing of the resource.
@@ -27,7 +27,7 @@ class ReviewsController extends ApiController
     /**
      * Display the specified resource.
      */
-    public function show(Review $reviews)
+    public function show(Brand $brand)
     {
         //
     }
@@ -35,7 +35,7 @@ class ReviewsController extends ApiController
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Review $reviews)
+    public function update(Request $request, Brand $brand)
     {
         //
     }
@@ -43,7 +43,7 @@ class ReviewsController extends ApiController
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Review $reviews)
+    public function destroy(Brand $brand)
     {
         //
     }

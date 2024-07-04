@@ -1,19 +1,21 @@
 <?php
 
-namespace App\Http\Controllers\API\V1;
+namespace App\Http\Controllers\API\V1\Admin;
 
 use App\Http\Controllers\API\ApiController;
-use App\Models\Brand;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
-class BrandController extends ApiController
+class ProductController extends ApiController
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $products=Product::activeDesc()->with('categories','brands')->get();
+
+        return $this->responseSuccess($products,200);
     }
 
     /**
@@ -27,7 +29,7 @@ class BrandController extends ApiController
     /**
      * Display the specified resource.
      */
-    public function show(Brand $brand)
+    public function show(Product $product)
     {
         //
     }
@@ -35,7 +37,7 @@ class BrandController extends ApiController
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Brand $brand)
+    public function update(Request $request, Product $product)
     {
         //
     }
@@ -43,7 +45,7 @@ class BrandController extends ApiController
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Brand $brand)
+    public function destroy(Product $product)
     {
         //
     }

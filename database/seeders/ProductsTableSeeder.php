@@ -24,7 +24,7 @@ class ProductsTableSeeder extends Seeder
                 'name' => $faker->word,
                 'description' => $faker->sentence,
                 'price' => $faker->randomFloat(2, 10, 100),
-                'is_active' => 1,
+                'is_active' => rand(0,1),
                 'stock' => $faker->numberBetween(1, 100),
             ]);
 
