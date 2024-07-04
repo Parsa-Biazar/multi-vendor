@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\API\V1\Admin\ProductController;
+use App\Http\Controllers\API\V1\Front\MainPageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,5 +17,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('guest')->prefix('/v1')
     ->group(function() {
-        Route::resource('product',ProductController::class);
+        Route::get('/', [MainPageController::class,'index']);
+        Route::get('/{product}', [MainPageController::class,'show']);
     });
