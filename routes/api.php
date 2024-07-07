@@ -15,8 +15,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::middleware('guest')->prefix('/v1')
+//Route::middleware('guest')->prefix('/v1')
+Route::prefix('/v1')
     ->group(function() {
-        Route::get('/', [MainPageController::class,'index']);
-        Route::get('/{product}', [MainPageController::class,'show']);
+        Route::get('/', [MainPageController::class, 'index']);
+        Route::get('/{product}', [MainPageController::class, 'show']);
+        Route::get('/test', function () {
+            dd('surprise motherfucker');
+        });
+//        Route::get('/ca', function () {
+//            dd('there we are!');
+//        });
+//        Route::prefix('/categories')
+//            ->group(function() {
+//                Route::get('/', [MainPageController::class, 'showCategories']);
+//                Route::get('/{category}', [MainPageController::class, 'showOneCategory']);
+//            });
     });
+
