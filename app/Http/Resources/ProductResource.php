@@ -16,7 +16,6 @@ class ProductResource extends JsonResource
     {
         return [
             'vendor_info' => new VendorResource($this->whenLoaded('vendor')),
-//            'vendor_info' => VendorResource::collection($this->whenLoaded('vendor')),
             'name' => $this-> name,
             'description' => $this-> description,
             'price' => $this-> price,
@@ -26,7 +25,6 @@ class ProductResource extends JsonResource
             'updated' => $this->updated_at->diffForHumans(),
             'categories'=> CategoryResource::collection($this->whenLoaded('categories')),
             'brands'=> BrandResource::collection($this->whenLoaded('brands')),
-//            'brand'=>new BrandResource($this->whenLoaded('brand')),
         ];
     }
 }
