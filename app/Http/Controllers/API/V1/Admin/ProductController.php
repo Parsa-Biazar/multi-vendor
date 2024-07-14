@@ -13,6 +13,7 @@ class ProductController extends ApiController
      */
     public function index()
     {
+        dd('hi');
         $products=Product::activeDesc()->with('categories','brands')->get();
 
         return $this->responseSuccess($products,200);

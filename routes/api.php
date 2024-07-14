@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\API\V1\Admin\ProductController;
+use App\Http\Controllers\api\v1\front\AuthController;
 use App\Http\Controllers\API\V1\Front\MainPageController;
 use Illuminate\Support\Facades\Route;
 
@@ -29,6 +31,12 @@ Route::prefix('/v1')
                 Route::get('/', [MainPageController::class, 'brands']);
                 Route::get('/{brand}', [MainPageController::class, 'showOneBrand']);
             });
+        Route::get('/register',[AuthController::class,'registershow']);
+        Route::get('/login',[AuthController::class,'loginshow']);
+        Route::post('/register',[AuthController::class,'register']);
+        Route::post('/login',[AuthController::class,'login']);
+        Route::prefix('/admin')->middleware('sanctum')->group(function (){
+            Route::get('/',[ProductController::class,'index']);
+        });
         Route::get('/{product}', [MainPageController::class, 'show']);
     });
-
